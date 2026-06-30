@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder - Smart Cloud Vault</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="no-sidebar">
+
+<div class="main">
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1 id="folderName">Folder</h1>
+        <p>Manage files inside this folder</p>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="folder-toolbar">
+        <input type="file" id="folderFile" hidden>
+        <button class="action-btn" onclick="document.getElementById('folderFile').click()">Select File</button>
+        <button class="action-btn" onclick="uploadFolderFile()">Upload File</button>
+        <button class="action-btn" onclick="window.location.href='files.html'">Back To Folders</button>
+    </div>
+
+    <!-- FILE COUNT -->
+    <div class="stat-card">
+        <h2 id="fileCount">0</h2>
+        <p>Files In Folder</p>
+    </div>
+
+    <!-- FILES -->
+    <div id="folderFiles" class="file-grid"></div>
+
+</div>
+
+<script src="folder.js"></script>
+</body>
+</html>

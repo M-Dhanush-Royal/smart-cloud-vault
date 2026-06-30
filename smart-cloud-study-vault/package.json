@@ -1,0 +1,36 @@
+{
+  "name": "smart-cloud-study-vault",
+  "version": "1.0.0",
+  "description": "A cloud-based file storage and management system built with Node.js, Express, MongoDB, and AWS S3. Features Google OAuth authentication, file upload/download, folder management, and an admin dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cloud-storage",
+    "file-management",
+    "aws-s3",
+    "mongodb",
+    "express",
+    "google-oauth",
+    "node.js"
+  ],
+  "author": "Dhanush Royal",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1054.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.6.2",
+    "multer": "^2.1.1",
+    "multer-s3": "^3.0.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}

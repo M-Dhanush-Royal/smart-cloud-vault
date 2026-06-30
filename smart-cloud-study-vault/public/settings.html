@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Smart Cloud Vault</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="no-sidebar">
+
+<div class="main">
+    <h1 style="color: dimgray;">Settings</h1>
+    <div class="section-card">
+        <h2 style="color: dimgray;margin:8px 0 16px;">Profile Settings</h2>
+        <label for="nameInput" style="color:dimgray";font-size:14px;">Display Name</label>
+        <input type="text" id="nameInput" placeholder="Display Name" style="width:100%;padding:16px;margin:8px 0 16px;border:none;border-radius:10px;background:#ebecef;color: #000000;outline:none;">
+
+        <label for="role" style="color:dimgray";font-size:14px;">Role</label>
+        <input type="text" id="role" placeholder="Enter Role" style="width:100%;padding:16px;margin:8px 0 16px;border:none;border-radius:10px;background:#ebecef;color: #000000;outline:none;">
+
+        <label for="image" style="color:dimgray";font-size:14px;">Profile Image URL</label>
+        <input type="text" id="image" placeholder="Profile Image URL" style="width:100%;padding:16px;margin:8px 0 16px;border:none;border-radius:10px;background:#ebecef;color: #000000;outline:none;">
+
+        <br>
+        <button class="premium-btn" onclick="saveProfile()">Save Profile</button>
+        <button class="action-btn" onclick="window.location.href='dashboard.html'" style="margin-left:10px;">⬅ Back to Dashboard</button>
+    </div>
+</div>
+
+<script src="settings.js"></script>
+</body>
+</html>

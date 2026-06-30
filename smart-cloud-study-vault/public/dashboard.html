@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cloud Vault</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div>
+        <h2 class="logo">Smart Vault</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li onclick="window.location.href='files.html'">My Files</li>
+
+            <li onclick="window.location.href='settings.html'">Settings</li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+    <div class="profile">
+        <img src="https://i.pravatar.cc/100" />
+        <h3 id="profileName">User</h3>
+        <p id="profileRole">Cloud Storage User</p>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="search-box">
+            <input type="text" placeholder="Search files..." id="searchInput" onkeyup="searchFiles()" />
+        </div>
+    
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div>
+            <h1>Smart Cloud Workspace </h1>
+            <p id="welcomeUser">Welcome Back</p>
+        </div>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="upload-box" id="uploadBox" onclick="document.getElementById('fileInput').click()">
+        <h2 style="color: dimgray;">Drag & Drop Files</h2>
+        <p style="color: dimgray;">Click to upload files into cloud</p>
+    </div>
+    <input type="file" id="fileInput" hidden onchange="uploadFile()" />
+
+    <!-- FILTERS -->
+    <div class="filter-bar">
+        <button onclick="filterFiles('all')">All</button>
+        <button onclick="filterFiles('image')">Images</button>
+        <button onclick="filterFiles('pdf')">PDFs</button>
+        <button onclick="filterFiles('doc')">Docs</button>
+        <button onclick="filterFiles('zip')">ZIPs</button>
+    </div>
+
+    <!-- FILES -->
+    <div id="fileContainer" class="file-grid"></div>
+    </div>
+
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

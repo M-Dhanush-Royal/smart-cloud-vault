@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Files - Smart Cloud Vault</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div>
+        <h2 class="logo">Smart Vault</h2>
+        <ul>
+            <li onclick="window.location.href='/dashboard.html'">Dashboard</li>
+            <li class="active">My Files</li>
+            <li onclick="window.location.href='settings.html'">Settings</li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+    <div class="profile">
+        <img src="https://i.pravatar.cc/100" />
+        <h3 id="profileName">User</h3>
+        <p id="profileRole">Cloud Storage User</p>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="search-box">
+            <input type="text" placeholder="Search files..." id="searchInput" onkeyup="searchFiles()" />
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div>
+            <h1 style="color: dimgray;">My Files</h1>
+            <p style="color: dimgray;">Manage folders and files</p>
+        </div>
+    </div>
+
+
+
+    <!-- FOLDERS -->
+    <div class="section-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+    <h2 style="color: dimgray;width: 200%;">Folders</h2>
+    <button id="createFolderBtn">Create Folder</button>
+</div>
+        <div id="folderContainer" class="file-grid"></div>
+    </div>
+
+    <!-- FILES -->
+    <div class="section-card">
+        <h2 style="color: dimgray;">Files</h2>
+        <div class="filter-bar">
+            <button onclick="filterFiles('all')">All</button>
+            <button onclick="filterFiles('image')">Images</button>
+            <button onclick="filterFiles('pdf')">PDFs</button>
+            <button onclick="filterFiles('doc')">Docs</button>
+            <button onclick="filterFiles('zip')">ZIPs</button>
+        </div>
+        <div id="fileContainer" class="file-grid"></div>
+    </div>
+
+</div>
+
+<script src="files.js"></script>
+</body>
+</html>
