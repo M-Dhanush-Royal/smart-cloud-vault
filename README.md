@@ -416,3 +416,39 @@ Graduation Year: 2027
 License
 
 This project is developed for educational, learning, and academic purposes. It can be freely modified and used for educational projects.
+
+
+
+
+## Architecture Diagram
+
+![Cloud Architecture](Smart%20Cloud%20Study%20Vault%20Architecture.drawio.png)
+
+## Architecture Overview
+
+This project follows a 3-tier cloud architecture.
+
+### Client Tier
+- HTML
+- CSS
+- JavaScript
+- Users access the application through a web browser.
+
+### Application Tier
+- AWS Load Balancer
+- Node.js + Express.js servers
+- Authentication using JWT and bcrypt
+
+### Data Tier
+- Redis Cache for frequently accessed data
+- MongoDB Atlas for user data and file metadata
+- AWS S3 for storing uploaded files
+
+## Scaling
+
+The AWS Load Balancer distributes incoming traffic across multiple application servers. Additional servers can be added to handle increased user traffic.
+
+## Caching
+
+Redis stores frequently accessed data to reduce database load and improve application performance.
+
